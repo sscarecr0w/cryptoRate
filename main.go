@@ -8,6 +8,7 @@ import (
 	"net/http"
 	"net/url"
 	"sync"
+	"time"
 
 	"github.com/jedib0t/go-pretty/v6/table"
 )
@@ -39,6 +40,7 @@ func main() {
 
 	var wg sync.WaitGroup
 	for _, id := range CryptoIDS {
+		time.Sleep(time.Millisecond * 200)
 
 		wg.Add(1)
 
